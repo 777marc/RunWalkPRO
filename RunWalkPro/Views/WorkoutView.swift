@@ -7,27 +7,34 @@
 
 import SwiftUI
 import MapKit
+import Combine
 
 struct WorkoutView: View {
     
-    @State var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(
-            latitude: 28.5383,
-            longitude: -81.3792
-        ),
-        span: MKCoordinateSpan(
-            latitudeDelta: 20,
-            longitudeDelta: 20
-        )
-    )
+    @ObservedObject private var locationManager = LocationManager()
+    @State private var region = MKCoordinateRegion.defaultRegion
+    @State private var cancellable: AnyCancellable?
+    
+    private func setCurrentLocation() {
+        cancellable = locationManager.$location.sink { location in
+            region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
+        }
+    }
     
     var body: some View {
         
         VStack {
-            Text("Current Workout")
-            Map(coordinateRegion: $region)
-                .navigationTitle("Locations")
-            Text(message())
+            if locationManager.location != nil {
+                Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil)
+            } else {
+                Text("Locating user location...")
+            }
+            
+        }
+        
+        .onAppear {
+            print("on appear")
+            setCurrentLocation()
         }
         
     }

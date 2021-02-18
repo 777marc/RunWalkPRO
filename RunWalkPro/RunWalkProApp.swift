@@ -27,6 +27,7 @@ struct RunWalkProApp: App {
                 }
                 .tabItem {
                     Image(systemName: "figure.walk")
+                    Text("Workout")
                 }
                 
                 NavigationView{
@@ -34,6 +35,7 @@ struct RunWalkProApp: App {
                 }
                 .tabItem {
                     Image(systemName: "gearshape")
+                    Text("Settings")
                 }
                 
             }
