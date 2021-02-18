@@ -13,6 +13,10 @@
 		F7A5495925DDBE1400111EA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A5495825DDBE1400111EA3 /* Preview Assets.xcassets */; };
 		F7A5496425DDBE1500111EA3 /* RunWalkProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5496325DDBE1500111EA3 /* RunWalkProTests.swift */; };
 		F7A5496F25DDBE1500111EA3 /* RunWalkProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5496E25DDBE1500111EA3 /* RunWalkProUITests.swift */; };
+		F7A5498825DDBFD300111EA3 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5498725DDBFD300111EA3 /* WorkoutView.swift */; };
+		F7A5499D25DDC4A600111EA3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5499C25DDC4A600111EA3 /* SettingsView.swift */; };
+		F7A549A325DDD2AE00111EA3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A549A225DDD2AE00111EA3 /* LocationManager.swift */; };
+		F7A549A925DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A549A825DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		F7A5496A25DDBE1500111EA3 /* RunWalkProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunWalkProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5496E25DDBE1500111EA3 /* RunWalkProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunWalkProUITests.swift; sourceTree = "<group>"; };
 		F7A5497025DDBE1500111EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A5498725DDBFD300111EA3 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		F7A5499C25DDC4A600111EA3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F7A549A225DDD2AE00111EA3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F7A549A825DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				F7A5495125DDBE1400111EA3 /* RunWalkProApp.swift */,
-				F7A5495325DDBE1400111EA3 /* ContentView.swift */,
+				F7A549A725DDD60D00111EA3 /* Extensions */,
+				F7A549A125DDD29700111EA3 /* Managers */,
+				F7A5499525DDC48600111EA3 /* Views */,
 				F7A5495525DDBE1400111EA3 /* Assets.xcassets */,
 				F7A5495A25DDBE1400111EA3 /* Info.plist */,
 				F7A5495725DDBE1400111EA3 /* Preview Content */,
@@ -128,6 +138,32 @@
 				F7A5497025DDBE1500111EA3 /* Info.plist */,
 			);
 			path = RunWalkProUITests;
+			sourceTree = "<group>";
+		};
+		F7A5499525DDC48600111EA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5498725DDBFD300111EA3 /* WorkoutView.swift */,
+				F7A5495325DDBE1400111EA3 /* ContentView.swift */,
+				F7A5499C25DDC4A600111EA3 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7A549A125DDD29700111EA3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A549A225DDD2AE00111EA3 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F7A549A725DDD60D00111EA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7A549A825DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A5495425DDBE1400111EA3 /* ContentView.swift in Sources */,
+				F7A549A925DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				F7A5499D25DDC4A600111EA3 /* SettingsView.swift in Sources */,
+				F7A549A325DDD2AE00111EA3 /* LocationManager.swift in Sources */,
+				F7A5498825DDBFD300111EA3 /* WorkoutView.swift in Sources */,
 				F7A5495225DDBE1400111EA3 /* RunWalkProApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,33 @@ import SwiftUI
 struct RunWalkProApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            TabView{
+                
+                NavigationView{
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                
+                NavigationView{
+                    WorkoutView()
+                }
+                .tabItem {
+                    Image(systemName: "figure.walk")
+                }
+                
+                NavigationView{
+                    SettingsView()
+                }
+                .tabItem {
+                    Image(systemName: "gearshape")
+                }
+                
+            }
+            
         }
     }
 }
