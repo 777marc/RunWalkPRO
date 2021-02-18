@@ -13,21 +13,53 @@ struct ContentView: View {
     var body: some View {
         
         VStack{
-            Text("Home View")
+            
             Button(action: {
                 print("button click")
             }) {
                 HStack {
-                    Image(systemName: "square.and.arrow.up")
+                    Image(systemName: "plus.square.fill")
                         .font(.title)
-                    Text("Share")
+                        .foregroundColor(.blue)
+                    Text("New Workout")
                         .fontWeight(.semibold)
                         .font(.title)
+                        .foregroundColor(.blue)
                 }
                 
             }
-                .navigationTitle("Home")
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.blue, lineWidth: 1)
+            )
+
+            Button(action: {
+                print("button click")
+            }) {
+                HStack {
+                    Image(systemName: "eye")
+                        .font(.title)
+                        .foregroundColor(.blue)
+                    Text("Previous Workout")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                        .foregroundColor(.blue)
+                }
+                
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.blue, lineWidth: 1)
+            )
+            
+            
         }
+        .navigationTitle("Home")
+        .padding()
     }
 }
 
