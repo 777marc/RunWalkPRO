@@ -22,12 +22,20 @@ struct WorkoutView: View {
         cancellable = locationManager.$location.sink { location in
             region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
             print("in set")
+
+            var lastLoc: CLLocation
+            var currentLoc: CLLocation
+
+            if lastLat == 0.0 {
+                lastLat = locationManager.location!.coordinate.latitude
+                lastLon = locationManager.location!.coordinate.longitude
+            }
             
-            var lastLoc = CLLocation(latitude: lastLat, longitude: lastLon)
-            
-            var currentLoc = CLLocation(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude)
-            
-            distance += lastLoc.distance(from: currentLoc)
+            if locationManager.location!.coordinate.latitude > 0 {
+                lastLoc = CLLocation(latitude: lastLat, longitude: lastLon)
+                currentLoc = CLLocation(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude)
+                distance += lastLoc.distance(from: currentLoc)
+            }
             
             print(distance)
             
