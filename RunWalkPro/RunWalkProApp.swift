@@ -15,7 +15,8 @@ struct RunWalkProApp: App {
             TabView{
                 
                 NavigationView{
-                    ContentView()
+                    let timerVal = 0
+                    ContentView(timerVal: timerVal)
                 }
                 .tabItem {
                     Image(systemName: "house")
@@ -23,7 +24,12 @@ struct RunWalkProApp: App {
                 }
                 
                 NavigationView{
-                    WorkoutView()
+                    
+                    let lat = 0.0
+                    let lon = 0.0
+                    let dist = 0.0
+                    
+                    WorkoutView(lastLat: lat, lastLon: lon, distance: dist)
                 }
                 .tabItem {
                     Image(systemName: "figure.walk")
