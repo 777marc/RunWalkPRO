@@ -8,19 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var timerVal:Int
-    
+        
     var body: some View {
         
         VStack{
             
             Button(action: {
-                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                    if self.timerVal > 0 {
-                        self.timerVal -= 1
-                    }
-                }
+                print("action")
+    
             }) {
                 HStack {
                     Image(systemName: "plus.square.fill")
@@ -60,23 +55,20 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.blue, lineWidth: 1)
             )
-            
-            Text("Time: \(timerVal)")
-                .font(.title3)
+           
             
         }
         .navigationTitle("Home")
         .padding()
+        
+       
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        
-        let timerVal = 0
-        
-        ContentView(timerVal: timerVal)
+        ContentView()
             .navigationTitle("Home")
     }
 }

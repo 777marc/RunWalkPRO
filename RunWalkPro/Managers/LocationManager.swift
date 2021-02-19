@@ -12,10 +12,10 @@ class LocationManager: NSObject, ObservableObject {
     
     private let locationsManager = CLLocationManager()
     @Published var location: CLLocation?
-    
+    @Published var distance: Double = 0.0
+
     override init() {
         super.init()
-        
         locationsManager.desiredAccuracy = kCLLocationAccuracyBest
         locationsManager.distanceFilter = kCLDistanceFilterNone
         locationsManager.requestWhenInUseAuthorization()
@@ -33,5 +33,5 @@ extension LocationManager: CLLocationManagerDelegate {
             self.location = location
         }
     }
-    
+   
 }

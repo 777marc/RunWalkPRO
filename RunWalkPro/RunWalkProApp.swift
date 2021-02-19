@@ -16,7 +16,7 @@ struct RunWalkProApp: App {
                 
                 NavigationView{
                     let timerVal = 0
-                    ContentView(timerVal: timerVal)
+                    ContentView()
                 }
                 .tabItem {
                     Image(systemName: "house")

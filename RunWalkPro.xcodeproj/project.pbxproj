@@ -17,6 +17,7 @@
 		F7A5499D25DDC4A600111EA3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5499C25DDC4A600111EA3 /* SettingsView.swift */; };
 		F7A549A325DDD2AE00111EA3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A549A225DDD2AE00111EA3 /* LocationManager.swift */; };
 		F7A549A925DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A549A825DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift */; };
+		F7A549B125E05CB000111EA3 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A549B025E05CB000111EA3 /* StopWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F7A5499C25DDC4A600111EA3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F7A549A225DDD2AE00111EA3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F7A549A825DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
+		F7A549B025E05CB000111EA3 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		F7A5495025DDBE1400111EA3 /* RunWalkPro */ = {
 			isa = PBXGroup;
 			children = (
+				F7A549AF25E05C9E00111EA3 /* Helpers */,
 				F7A5495125DDBE1400111EA3 /* RunWalkProApp.swift */,
 				F7A549A725DDD60D00111EA3 /* Extensions */,
 				F7A549A125DDD29700111EA3 /* Managers */,
@@ -164,6 +167,14 @@
 				F7A549A825DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7A549AF25E05C9E00111EA3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A549B025E05CB000111EA3 /* StopWatch.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A5495425DDBE1400111EA3 /* ContentView.swift in Sources */,
+				F7A549B125E05CB000111EA3 /* StopWatch.swift in Sources */,
 				F7A549A925DDD63500111EA3 /* MKCoordinateRegion+Extensions.swift in Sources */,
 				F7A5499D25DDC4A600111EA3 /* SettingsView.swift in Sources */,
 				F7A549A325DDD2AE00111EA3 /* LocationManager.swift in Sources */,
